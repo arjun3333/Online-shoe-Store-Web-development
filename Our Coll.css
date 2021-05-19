@@ -1,0 +1,245 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Architects Daughter', cursive;
+    scroll-behavior: smooth;
+}
+
+body{
+    width: 100%;
+    background: white;
+}
+
+.container{
+    width: 100%;
+    background: white;
+}
+
+.header{
+    width: 100%;
+}
+
+.header nav{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transition: 0.6s;
+    padding: 10px 50px;
+    z-index: 2;
+}
+
+.header nav img{
+    width: 80px;
+    transition: 0.6s;
+}
+
+.header nav ul{
+    background-color: rgb(195, 227, 231);;
+    width: 90%;
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: 'Josefin Sans', sans-serif;
+    padding: 15px;
+}
+
+.header nav ul li a{
+    font-weight: 500;
+    color: black;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+.header nav ul li a:hover{
+    color: #3b59b6;
+    text-transform: uppercase;
+}
+
+
+.collections-background{
+    margin-top: 6rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.collections-title{
+    
+    margin-top: 1rem;
+    font-family: 'Architects Daughter', cursive;
+    font-size: 40px;
+    text-align: center;
+    color: #1761a0;
+}
+
+.men-shoes-section{
+    margin-top: 2rem;
+    width: 100%;
+    background: linear-gradient(rgba(255,255,255,0.6),rgba(255,255,255,0.6)),url(../images/menssportshoesbck.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.woman-shoes-section{
+    width: 100%;
+    background: linear-gradient(rgba(255,255,255,0.6),rgba(255,255,255,0.6)),url(../images/girlsbck.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.collections-background h2{
+    margin-top: 2rem;
+    color: #1761a0;
+    font-size: 30px;
+}
+
+.collections-box-section{
+    padding: 2rem 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.collections-box-section a{
+    text-decoration: none;
+}
+
+.collections-box{
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    transition: 0.5s ease;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 10px 12px rgba(0,0,0,0.5);
+}
+
+.c1{
+    background: url(../images/mensdressshoes.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.c1:hover{
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../images/mensdressshoes.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.collections-box:hover h3{
+    color: #fff;
+}
+
+.c2{
+    background: url(../images/menssportshoes.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.c2:hover{
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../images/menssportshoes.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.c3{
+    background: url(../images/menscausualshoes.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.c3:hover{
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../images/menscausualshoes.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.c4{
+    background: url(../images/mensslipshoes.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.c4:hover{
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../images/mensslipshoes.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.c5{
+    background: url(../images/womendressshoes.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.c5:hover{
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../images/womendressshoes.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.c6{
+    background: url(../images/womensportshoe.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.c6:hover{
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../images/womensportshoe.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.c7{
+    background: url(../images/womenhighheels.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.c7:hover{
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../images/womenhighheels.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.c8{
+    background: url(../images/womenboots.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.c8:hover{
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../images/);
+    background-position: center;
+    background-size: cover;
+}
+
+.collections-box h3{
+    padding-bottom: 10px;
+    color: #3a3a3a;
+    font-family: 'Lobster', cursive;
+    font-weight: bold;
+    font-size: 25px;
+}
