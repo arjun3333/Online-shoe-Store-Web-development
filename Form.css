@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Architects Daughter', cursive;
+    scroll-behavior: smooth;
+    
+}
+
+body{
+    width: 100%;
+   
+   background: rgb(226, 240, 235);
+}
+
+
+
+.header{
+    width: 100%;
+}
+
+.header nav{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transition: 0.6s;
+    padding: 10px 50px;
+    z-index: 2;
+}
+
+.header nav img{
+    width: 80px;
+    transition: 0.6s;
+}
+
+.header nav ul{
+    background-color: rgb(195, 227, 231);;
+    width: 90%;
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: 'Josefin Sans', sans-serif;
+    padding: 15px;
+}
+
+.header nav ul li a{
+    font-weight: 500;
+    color: black;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+.header nav ul li a:hover{
+    color: #3b59b6;
+    text-transform: uppercase;
+}
+
+
+
+.formcontainer {
+    left: 10%;
+    width:70%;
+    margin: 120px;
+    background: rgb(164, 235, 210);
+    background-size:auto;
+    padding:10px;
+    position:absolute;
+    font-weight: bold;
+    
+ }
+
+
+.signup{
+text-align:center;
+font-size: 18px;
+font-weight: bold;
+background-color: rgb(12, 10, 10);
+color: white;
+padding: 14px 20px;
+margin: 6px 8px;
+border: none;
+cursor: pointer;
+width: 70%;
+opacity: 0.9;
+top:100%;
+left:30%;
+}
