@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soles Store</title>
+    <!-- <link rel="stylesheet" href="Style.css"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/lightslider.css">
+    <script type="text/javascript" src="js/JQuery3.3.1.js"></script>
+    <script type="text/javascript" src="js/lightslider.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+    <title> Testimonials Slider</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Architects Daughter', cursive;
+    scroll-behavior: smooth;
+}
+
+body{
+    width: 100%;
+    background: white;
+}
+
+.container{
+    width: 100%;
+    background: white;
+}
+
+.header{
+    width: 100%;
+}
+
+.header nav{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transition: 0.6s;
+    padding: 10px 50px;
+    z-index: 2;
+}
+
+.header nav img{
+    width: 80px;
+    transition: 0.6s;
+}
+
+.header nav ul{
+    width: 90%;
+    color: rgb(61, 112, 112);
+    background-color: bisque;
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: 'Josefin Sans', sans-serif;
+    padding: 15px;
+}
+
+.header nav ul li a{
+    font-weight: 500;
+    color: black;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+.header nav ul li a:hover{
+    color: #3b59b6;
+    text-transform: uppercase;
+}
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            height: 100%;
+            margin: 0;
+            background-color: #fffef5;
+        }
+        
+        .wrapper {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .card {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            background-color: white;
+            padding: 50px 35px;
+            border-radius: 8px;
+            box-shadow: 0px 5px 16px 1px rgb(212, 210, 210);
+        }
+        
+        .about-wrapper {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            width: 350px;
+            height: 350px;
+            z-index: 10;
+        }
+        
+        .image-wrapper {
+            flex-grow: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            width: 250px;
+            /* animation: funtoos 1s;
+            transition: 1s; */
+            overflow: hidden;
+            /* position: relative; */
+        }
+        
+        .about {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            padding: 70px 0;
+            padding-right: 2px;
+        }
+        
+        p {
+            font-size: 24px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 300;
+            color: hsl(240, 38%, 20%);
+            /* animation: funtoos 1s; */
+            overflow: hidden;
+            transition: 450ms;
+        }
+        
+        @keyframes funtoos {
+            from {
+                height: 0px;
+                opacity: 0;
+            }
+            to {
+                height: 100%;
+                opacity: 1;
+            }
+        }
+        
+        .name {
+            font-size: 14px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+        }
+        
+        .profession {
+            font-size: 14px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            color: brown;
+        }
+        
+        .image {
+            /* width: 80%; */
+            height: 250px;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 10px;
+            display: flex;
+            flex-direction: row;
+            transition: 1s;
+        }
+        
+        .slider-button {
+            align-self: flex-start;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            height: 35px;
+            width: 70px;
+            border-radius: 40px;
+            background-color: white;
+            box-shadow: 0px 5px 16px 1px rgb(179, 179, 179);
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        @media (max-width:768px) {
+            body {
+                background-color: white;
+            }
+            .card {
+                justify-content: center;
+                box-shadow: none;
+            }
+            .about-wrapper {
+                order: 2;
+                width: 100%;
+                justify-content: flex-start;
+                align-items: center;
+            }
+            .about {
+                align-items: center;
+                text-align: center;
+                padding: 25px 25px;
+            }
+            .image-wrapper {
+                order: 1;
+            }
+            .p {
+                padding-top: 25px;
+            }
+           
+        }
+        
+        @media (max-width: 450px) {
+            p {
+                font-size: 22px;
+                margin: 5px 0px;
+                padding-top: 50px;
+            }
+            body {
+                background-color: white;
+            }
+            .card {
+                justify-content: center;
+                box-shadow: none;
+                padding-right: 5px;
+                padding-left: 5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        
+        <nav class="navigation">
+            <a href="index.html"><img src="images/logo.png" alt="soles store"></a>
+            <ul>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Form.html">Form</a></li>
+                <li><a href="New Arrivals.html">New Shoes</a></li>
+                <li><a href="Our Coll.html">Collections</a></li>
+                <li><a href="Testm.html">Testimonials</a></li>
+                <li><a href="Wheel.html">Game</a></li>
+                <li><a href="Contact us.html">Contact</a></li>
+            </ul>
+            
+        </nav>
+
+    <div class="wrapper">
+        <div style="position: relative;" class="card">
+            <div class="about-wrapper">
+                <div class="about">
+                    <p id="para">“ I cannot speak highly enough of your products. They’re top quality, and I have already recommended them to many others.I really appreciated the great and friendly customer service coupled with an incredibly high-class product. Please continue building these personal relationships with each of your customers.”</p>
+                    <span id="name" class="name">Olivia</span>
+                    <span id="profession" class="profession">product No:54082</span>
+
+                </div>
+            </div>
+
+            <div style="position: relative;" class="right-content">
+
+                <div style="height:340px;width:250px ;position: absolute;top: 50%;transform: translate(-40%,-50%);" class="svg">
+                    <img style="height: 100%;position: absolute;" src="./images/pattern-bg.svg">
+                </div>
+
+
+
+                <div class="image-wrapper">
+
+
+                    <div id="image" style="position: relative;" class="image">
+
+                        <img style="border-radius: 8px;object-fit: cover;max-width:250px;" src="./images/image-tanya.jpg">
+
+                        <img style="border-radius: 8px;object-fit: cover;max-width: 250px;" src="./images/cristin-awesome.jpg">
+                        <img style="border-radius: 8px;object-fit: cover;max-width: 250px;" src="./images/image-john.jpg">
+                    </div>
+                    <div id="slider-button" class="slider-button">
+                        <div style="cursor: pointer;" id="leftbutton" class="left">
+                            <span style="height: 25px;width: 25px;" class="iconify" data-icon="dashicons:arrow-left-alt2" data-inline="false"></span>
+
+                        </div>
+                        <div style="cursor:pointer;" id="rightbutton" class="right">
+
+                            <span style="height: 25px;width: 25px;" class="iconify" data-icon="dashicons:arrow-right-alt2" data-inline="false"></span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <div style="position: absolute;bottom: 0px;height: 100px;width: 90%;left: 0;" class="bottomsvg">
+                <img style="width: 100%;height: 100%;" src="./images/pattern-curve.svg">
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+</body>
+<script>
+    var sliderbutton = document.getElementById('slider-button'),
+        leftbutton = document.getElementById('leftbutton'),
+        rightbutton = document.getElementById('rightbutton'),
+        imagelist = document.getElementById('image'),
+        para = document.getElementById('para');
+    var nameof = document.getElementById('name'),
+        profession = document.getElementById('profession'),
+        x = 1,
+        contentlist = [
+            [
+                ` “ I cannot speak highly enough of your products. They’re top quality, and I have already recommended them to many others.I really appreciated the great and friendly customer service coupled with an incredibly high-class product. Please continue building these personal relationships with each of your customers. ”`,
+                'Olivia',
+                'Product No:54082'
+
+            ],
+            [
+                `
+  “A few years ago I ordered a pair of shoes for my boyfriend. My boyfriend had specifically picked out the shoes from your website and shown them to me. My overall experience with your company was tremendous and I would certainly do business with you again, as well as refer others to you.” `,
+                'Lily',
+                'Product No:78562'
+            ],
+            [
+                ` What particularly attracted me was the style of the shoes I purchased. I have had great trouble finding similar styles here in Hong Kong. I’m a fussy shoe buyer, and "Soles Store"scratched my especially particular itch. ”`,
+                'James',
+                'Product No:90082'
+
+            ],
+
+        ];
+
+
+    leftbutton.addEventListener('mouseup', async function(event) {
+
+
+        if (x > 1) {
+            x -= 1;
+
+            const lastnum = imagelist.style.getPropertyValue('transform').length - 3;
+            var xoffsetvalue = +imagelist.style.getPropertyValue('transform').substring(11, lastnum) + 250;
+
+            imagelist.style.transform = `translateX(${xoffsetvalue}px)`;
+            para.innerText = '';
+            para.innerText = contentlist[x - 1][0];
+            nameof.innerText = '';
+            nameof.innerText = contentlist[x - 1][1];
+            profession.innerText = '';
+            profession.innerText = contentlist[x - 1][2];
+
+            para.style.animation = 'funtoos';
+            para.style.animationDuration = '1s';
+
+            await setTimeout(function(event) {
+
+                para.style.animation = 'none';
+                console.log('reset done');
+
+            }, 1000);
+
+
+        }
+
+    });
+
+
+    rightbutton.addEventListener('mouseup', async function(event) {
+        if (x != imagelist.children.length && x < imagelist.children.length) {
+
+            x += 1;
+            // para.style.animation = 'none';
+            console.log(imagelist.children.length, x);
+            if (x <= imagelist.children.length) {
+
+
+
+                const lastnum = imagelist.style.getPropertyValue('transform').length - 3;
+                var xoffsetvalue = +imagelist.style.getPropertyValue('transform').substring(11, lastnum) - 250;
+
+                imagelist.style.transform = `translateX(${xoffsetvalue}px)`;
+
+                para.innerText = '';
+                para.innerText = contentlist[x - 1][0];
+                nameof.innerText = '';
+                nameof.innerText = contentlist[x - 1][1];
+                profession.innerText = '';
+                profession.innerText = contentlist[x - 1][2];
+
+                para.style.animation = 'funtoos';
+                para.style.animationDuration = '1s';
+
+                await setTimeout(function(event) {
+
+                    para.style.animation = 'none';
+                    console.log('reset done');
+
+                }, 1000);
+
+            }
+
+        }
+
+
+    });
+</script>
+
+<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+
+</html>
+
