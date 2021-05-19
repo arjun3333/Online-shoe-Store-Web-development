@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soles Store</title>
+    <link rel="stylesheet" href="css/Form.css">
+    <script src="js/Form.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/lightslider.css">
+    <script type="text/javascript" src="js/JQuery3.3.1.js"></script>
+    <script type="text/javascript" src="js/lightslider.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container"></div>
+        <div class="header">
+        
+            <nav class="navigation">
+                <a href="index.html"><img src="images/logo.png" alt="soles store"></a>
+                <ul>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="Form.html">Form</a></li>
+                    <li><a href="New Arrivals.html">New Shoes</a></li>
+                    <li><a href="Our Coll.html">Collections</a></li>
+                    <li><a href="Testm.html">Testimonials</a></li>
+                    <li><a href="Wheel.html">Game</a></li>
+                    <li><a href="Contact us.html">Contact</a></li>
+                </ul>
+            </nav>
+            </div>
+
+   <div class="formcontainer">
+    
+      <h1 style="text-align: center;">Sign Up</h1>
+      <br>
+      <h3> 
+      <form action="submit.html" method="GET" target="_blank">
+        <label for="fname">Name:</label>
+        <input style="width: 30%; height:30px;" type="text" id="fname" name="firstname" required>
+        
+        <label for="email"><b>E-mail:</b></label>
+        <input style="width: 45%; height:30px;left:30px;" type="email" id="email" name="email" placeholder="soles@example.com"><br><br>
+
+        <label for="address:">Address</label><br>
+        <input style="width: 50%; height:30px;" type="password" id="password" name="password" autofocus><br><br>
+
+        <label for="Gender">Gender:</label><br>
+        <input type="radio" id="male" name="gender" value="gender">
+        <label for="age">Male</label>
+        <input type="radio" id="Female" name="gender" value="gender">
+        <label for="gender">Female</label>
+        </br>
+        <br>
+        
+         <p>Biography:</p>
+       <textarea style="width: 50%;"cols="55" rows="5" value="Biography" required>
+      </textarea>
+      <br>
+      <br>
+          <p>Filters:</p>
+        <input style="width: 50%;height:30px;" list="Filters" placeholder="occasional" required>
+        <datalist id="Filters"><br>
+            <option value="Traditional">Traditional</option>
+            <option value="PartyWear">partyWear</option>
+            <option value="occasional">occasional</option>
+            <option value="Dailywear">Dailywear</option>
+
+        </datalist>
+        <br>
+        <br>
+        <p>Categories:</p>
+        <input  type="checkbox"name="interest" value="women">Womens<br>
+        <input type="checkbox" name="interest" value="men">Mens<br>
+        <input type="checkbox" name="interest" value="children">Children<br>
+        <br>
+        
+        <div>
+            <button style="width: 45%; height: 50px;" type="submit" class="signup" button="centre" onClick="ValidateForm(this.form)"
+            >Sign Up</button><br>
+            <br>
+            </div>
+      </form> 
+    </div>
+    <br>
+</br>
+
+    
+</body>
+<br></br>
+</html>
